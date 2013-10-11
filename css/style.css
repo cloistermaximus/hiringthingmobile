@@ -125,17 +125,17 @@ input.longfield {
 	background: #c5d1d4;
 }
 #jobs {
-	/* display: none; */
+	display: none;
 width: 100%; height: 100%;
 }
 #applicants {
-	/* display: none; */
+	display: none;
 width: 100%; height: 100%;
 }
 
 #applicantdetail {
-width: 100%; height: 100%;
-	/* display: none; */
+	width: 100%; height: 100%;
+	display: none;
 }
 
 .biglogo {
