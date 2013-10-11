@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<title>Hiring Thing</title>
+		<link href="css/style.css?v=8" rel="stylesheet" type="text/css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/hiringthing.js"></script>
+	</head>
+	<body onload="">
+		<div id="appview">
+
+
+			<div id="signin">
+				<div class="biglogo"><img src="images/hiringthing_logo.png" width="300" height="59" border="0" /></div>
+				<div class="errors"><p id="loginerror">&nbsp;</p></div>
+				<input type="email" id="email" name="email" class="longfield" value="Email" onfocus="if(this.value == 'Email') { this.value = ''; }"/>
+				<input type="text" id="password" name="password" class="longfield" value="Password" onfocus="if(this.value == 'Password') { this.value = ''; this.type = 'password' }"/>
+				<p class="checktext"><input type="checkbox" id="remember" class="icheckbox"/> Remember Me</p>
+				<input type="submit" name="submit" value="Sign In" class="ibutton" onClick="login();"/>
+				<p class="botlink" onClick="showgetpassword();"><a>Forgot your password?</a></p>
+			</div>
+
+
+			<div id="forgotpw">
+				<div class="biglogo"><img src="images/hiringthing_logo.png" width="300" height="59" border="0" /></div>
+				<p class="instructions" id="forgotpwiline">Please enter your email address to reset your HiringThing password.</p>
+				<input type="email" name="email" id="forgottenemail" value="Email" onfocus="if(this.value == 'Email') { this.value = ''; }" class="longfield"/>
+				<input type="submit" name="submit" value="Continue" class="ibutton" onClick="submitemail();"/>
+			</div>
+
+			<div id="mainapp">
+			
+				<div class="topbar">
+					<div class="logo"><img src="images/hiringthing_logo.png" width="150" height="29" border="0" /></div>
+					<div class="logout" onClick="logout();">Logout</div>
+					<div class="brclear"></div>
+				</div>
+
+
+			<div id="jobs">
+				<div class="tabbar">
+					<div class="tabtitle" id="currenttabsum">Active Jobs (0)</div>
+						<div class="search">
+							<input type="search" name="search" value="Search" onsearch="searchfor(this.value);" class="searchapps"  onfocus="if(this.value == 'Search') { this.value = ''; }"/>
+						</div>
+					<div class="brclear"></div>
+				</div>
+				<div id="activejobs" class="tab">
+					<div id="activebutton" class="atab active" onClick="switchtoactive();">Active Jobs</div>
+					<div id="archivedbutton" class="atab" onClick="switchtoarchived();" >Archived Jobs</div>
+					<div class="brclear"></div>
+					<div class="columnlabels">
+						<div class="columna" onClick="sortjobsby('title');">Position <img src="images/blank.png" id="positionon" width="9" height="5" border="0" style="padding-bottom: 2px; padding-left: 4px;"></div>
+						<div class="columnb" onClick="sortjobsby('new_applicants');">New <img src="images/blank.png" id="newon" width="9" height="5" border="0" style="padding-bottom: 2px; padding-left: 4px;"></div>
+						<div class="columnc" onClick="sortjobsby('applicants');">Total <img src="images/blank.png" id="totalon" width="9" height="5" border="0" style="padding-bottom: 2px; padding-left: 4px;"></div>
+						<div class="brclear"></div>
+					</div>
+					
+					<div class="columns" id="activelisting">
+					</div>
+
+					<div class="columns" id="archivedlisting">
+					</div>
+					
+					
+				</div>
+				<div class="footerbar">
+					<div class="leftbbar">
+						<div class="botbartitle">Jobs</div>
+						<div class="bbaritem">
+							<h1 class="activejobsnum" id="activejobsnum">0</h1>
+							<p class="bbarlabel">Active</p>
+						</div>
+						<div class="bbaritem">
+							<h1 class="archivedjobsnum" id="archivedjobsnum">0</h1>
+							<p class="bbarlabel">Archived</p>
+						</div>
+						<div class="brclear"></div>
+					</div>
+					<div class="bbardiv"></div>
+					<div class="rightbbar">
+						<div class="botbartitle">Applicants</div>
+						<div class="bbaritem">
+							<h1 class="newapplicantsnum" id="newapplicantsnum">0</h1>
+							<p class="bbarlabel">New</p>
+						</div>
+						<div class="bbaritem">
+							<h1 class="totalapplicantsnum" id="totalapplicantsnum">0</h1>
+							<p class="bbarlabel">Total</p>
+						</div>
+						<div class="brclear"></div>
+					</div>
+					<div class="brclear"></div>
+				</div>
+			</div>
+
+
+
+
+
+
+			<div id="applicants">
+				<div class="tabbar">
+					<div id="jobsbutton" onClick="backtojobs();">&laquo; Jobs</div>
+					<div id="jobtitle"></div>
+					<div class="brclear"></div>
+				</div>
+				<div class="applicanttabbar">
+					<div id="newappstab" class="atab active" onClick="switchtonewapps();">New</div>
+					<div id="ratedappstab" class="atab" onClick="switchtoratedapps();">Rated</div>
+					<div id="archivedappstab" class="atab" onClick="switchtoarchivedapps();">Archived</div>
+					<div id="allappstab" class="atab" onClick="switchtoallapps();">All</div>
+					<div class="brclear"></div>
+				</div>
+				<div class="applicanttab">
+					
+					<div class="columns" id="newapplicants">
+					</div>
+					
+					<div class="columns" id="ratedapplicants">
+					</div>
+					
+					<div class="columns" id="archivedapplicants">
+					</div>
+
+					<div class="columns" id="allapplicants">
+					</div>
+					
+				</div>
+				<div class="footerbar">
+					<div class="leftbbar">
+						<div class="bbaritem">
+							<h1 id="newapplicantsnumz">0</h1>
+						</div>
+						<div class="bbaritem">
+							<p class="bbarlabel2lines">New</p>
+						</div>
+						<div class="brclear"></div>
+					</div>
+					<div class="bbardiv"></div>
+					<div class="rightbbar">
+						<h2 class="appnums" id="ratedappz">0</h1>
+						<p class="bbarlabel">Rated Applicants</p>
+						<div class="brclear"></div>
+						<h2 class="appnums" id="archivedappz">0</h1>
+						<p class="bbarlabel">Archived Applicants</p>
+						<div class="brclear"></div>
+						<h2 class="appnums" id="totalappz">0</h1>
+						<p class="bbarlabel">Total Applicants</p>
+						<div class="brclear"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="applicantdetail">
+				<div class="tabbar">
+					<div id="jobsbutton" onClick="backtoapplicants();">&laquo; Applicants</div>
+					<div class="brclear"></div>
+				</div>
+
+				<div class="applicanttab">
+					
+					<div class="columns">
+						<div class="listingrow"  id="applicantraw"></div>
+					</div>
+					
+					
+				</div>
+
+
+			<div class="brclear"></div>
+
+
+			</div>
+
+		</div>
+	</body>
+</html>

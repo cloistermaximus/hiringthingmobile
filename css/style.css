@@ -1,0 +1,603 @@
+html {
+	background: #f3f3f3;
+/*	width: 320px;
+	overflow: hidden;
+	width: 320px;
+	height: 480px;
+		height: 100%; */  
+	height: 100%;
+	background: #1c5466;
+	
+
+}
+body, h1, h2, h3, h4, p, form, dl, dt, dd {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	font-weight: normal;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+input[type='text'],input[type='number'],textarea {font-size:16px;}
+
+body {
+	overflow: hidden;
+	font-size: 14px;
+	height: 100%;
+}
+h1 {
+	font-size: 38px;
+	margin: 0;
+	padding: 0;
+	line-height: 32px;
+}
+
+#newapplicantsnumz {
+	font-size: 72px;
+	line-height: 72px;
+}
+
+h2 {
+	font-size: 21px;
+	margin: 0px 0px 0px 16px;
+	padding: 0;
+	line-height: 23px;
+	
+}
+
+h1, h2, h3 {
+    /* 
+	text-shadow: 0px 1px 1px #4d4d4d;
+    color: #111;
+    text-shadow: 0px 1px 1px #134856;
+    */
+    color: #ccc;
+}
+
+#info h1 {
+	font-size: 32px;
+	color: #333;
+	margin: 0px 0px 8px 0px;
+}
+#info h2 {
+	color: #333;
+	margin: 0px 0px 8px 0px;
+}
+#info h3 {
+	color: #333;
+	margin: 0px 0px 8px 0px;
+}
+
+#status {
+	margin-top: 16px;
+}
+
+#activejobs {
+	/* margin-top: 94px; */
+}
+#appview {
+  width: 100%; 
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  white-space: nowrap;
+}
+
+li {
+	white-space: normal;
+}
+
+.animate {
+  -webkit-transition: all .3s ease-out;
+  -webkit-transform: translate3d(-500px,0,0);
+}
+input.longfield {
+	display: block;
+}
+.errors p {
+	color: #fff;
+}
+.hide {
+	display: none;
+}
+.brclear { 
+     clear:both; 
+     height:0; 
+     margin:0;
+     font-size: 1px;
+     line-height: 0px;
+}
+#signin {
+	max-width: 300px;
+	margin: auto;
+}
+#forgotpw {
+	max-width: 300px;
+	margin: auto;
+	display: none;
+}
+#forgotpw p {
+	color: #fff;
+}
+#mainapp {
+	display: none;
+	position: relative;
+	height: 100%;
+	background: #c5d1d4;
+}
+#jobs {
+	/* display: none; */
+width: 100%; height: 100%;
+}
+#applicants {
+	/* display: none; */
+width: 100%; height: 100%;
+}
+
+#applicantdetail {
+width: 100%; height: 100%;
+	/* display: none; */
+}
+
+.biglogo {
+	text-align: center;
+	width: 100%;
+	height: 64px;
+	margin: 60px 0px 60px 0px;
+}
+.longfield {
+	width: 100%;
+	border: none;
+	font-size: 15px;
+	font-weight: 200;
+	color: #999;
+	background: #fff;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	margin: 8px 0px;
+	padding: 6px;
+	box-sizing: border-box;
+}
+.checktext {
+	width: 100%;
+	margin: 8px 0px;
+	font-size: 12px;
+	color: #fff;
+}
+.ibutton {
+	-webkit-appearance:none;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 6px;
+	width: 100%;
+	background: #c2d52c;
+	border: none;
+	margin: 8px 0px;
+	font-size: 16px;
+	font-weight: 200;
+	color: #fff;
+}
+.botlink {
+	text-align: center;
+	font-size: 12px;
+	margin-top: 60px;
+}
+
+
+
+.instructions {
+	margin: 0px 0px 20px 0px;
+}
+
+
+
+
+.topbar {
+	/* position: fixed; */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 44px;
+	overflow: hidden;
+	box-sizing: border-box;	
+	background: #000;
+	background: -moz-linear-gradient(top, #000000 0%, #333333 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(99%,#333333)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #000000 0%,#333333 99%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom, #000000 0%,#333333 99%); /* W3C */
+	color: #fff;
+	padding: 8px 6px 0px 6px;
+	z-index: 900;
+
+}
+.logo {
+	float: left;
+	width: 60%;
+	padding-bottom: 3px;
+}
+.logout {
+	float: right;
+	width: 33%;
+	background: #0dbbbc;
+	background: -moz-linear-gradient(top,  #0dbbbc 1%, #0f9999 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#0dbbbc), color-stop(100%,#0f9999)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0dbbbc 1%,#0f9999 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #0dbbbc 1%,#0f9999 100%); /* W3C */
+	text-align: center;
+	padding: 7px;
+	-moz-border-radius: 6px 6px 0px 0px;
+	border-radius: 6px 6px 0px 0px;
+	margin-top: 6px;
+}
+.logout a {
+	color: #fff;
+	text-decoration: none;
+}
+.tabbar {
+	/* position: fixed; */
+	z-index: 901;
+	top: 44px;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;	
+	padding: 6px 6px 0px 6px;
+	background: #0dbbbc;
+	background: -moz-linear-gradient(top,  #0dbbbc 1%, #0f9999 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#0dbbbc), color-stop(100%,#0f9999)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0dbbbc 1%,#0f9999 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #0dbbbc 1%,#0f9999 100%); /* W3C */
+
+		border-top: solid 1px #0f8b8c;
+ -moz-box-shadow:    inset 0 0 1px #18d4d5;
+   -webkit-box-shadow: inset 0 0 1px #18d4d5;
+   box-shadow:         inset 0 0 1px #18d4d5;
+
+
+}
+
+#activebutton {
+	float: left;
+}
+#arcivedbutton {
+	float: left;
+	position: relative;
+}
+.searchapps {
+	-webkit-appearance:none;
+	border: none;
+	font-size: 14px;
+	font-weight: 200;
+	color: #999;
+	background: #fff url('../images/search_icon_2.png') no-repeat;
+	background-size: 30px 23px;
+	background-position: 0px 4px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	margin: 4px 0px 8px 0px;
+	padding: 6px 6px 6px 32px;
+	box-sizing: border-box;	
+}
+.joblocation {
+	font-size: 11px;
+	color: #999;
+}
+.columnnum {
+ 	margin-top: 6px;
+}
+.badge {
+	top: 0;
+	right: 0;
+	background: #c2d52c;
+	font-size: 10px;
+	color: #fff;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 1px 6px 1px 6px;
+}
+.listingrow {
+	-moz-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+
+	border-top: solid 1px #fff;
+	-webkit-box-shadow: 0px 0px 3px rgba(9, 5, 0, 0.75);
+	-moz-box-shadow:    0px 0px 3px rgba(9, 5, 0, 0.75);
+	box-shadow:         0px 0px 3px rgba(9, 5, 0, 0.75);
+	padding: 4px 6px 4px 6px;
+	margin: 5px;
+	background: #f1f1f1;
+}
+.tabtitle {
+	padding: 10px 0px 0px 4px;
+	color: #fff;
+	float: left;
+}
+.columnlabels {
+ -moz-box-shadow:    inset 0 0 30px #1f2123;
+   -webkit-box-shadow: inset 0 0 30px #1f2123;
+   box-shadow:         inset 0 0 30px #1f2123;
+	border-top: solid 1px #999;
+
+	padding: 12px;
+
+	background: #3b4045; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3b4045 1%, #272a2d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#3b4045), color-stop(100%,#272a2d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3b4045 1%,#272a2d 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #3b4045 1%,#272a2d 100%); /* W3C */
+
+
+	color: #fff;
+}
+.altrow {
+	background: #fff;
+}
+.jobtitle a {
+	text-decoration: none;
+	color: #000;
+}
+.jobtitle {
+	font-size: 13px;
+	font-weight: bold;
+}
+.columnviewer {
+	font-size: 12px;
+	padding-top: 2px;
+}
+.columnviewer a {
+	text-decoration: none;
+	color: #666;
+}
+.applicantname a {
+	text-decoration: none;
+	color: #222;
+}
+.applicantname {
+	font-size: 13px;
+	font-weight: bold;
+}
+.search {
+	float: right;
+}
+
+.columnd {
+	float: left;
+	width: 52%;
+	text-align: left;
+	margin: 4px 0px 4px 0px;
+}
+
+.columne {
+	float: left;
+	width: 30%;
+	text-align: center;
+	margin: 4px 0px 4px 0px;
+	border-left: 1px solid #ccc;
+	padding-left: 5px;
+}
+
+.columnf {
+	border-left: 1px solid #ccc;
+	float: right;
+	width: 15%;
+	text-align: right;
+	margin: 4px 0px 4px 0px;
+}
+
+.columna {
+	float: left;
+	width: 60%;
+	text-align: left;
+}
+.columnb {
+	float: left;
+	width: 18%;
+	text-align: center;
+}
+.columnc {
+	float: left;
+	width: 18%;
+	text-align: center;
+}
+.carrotcolumn {
+	float: right;
+	width: 4%;
+	text-align: right;
+	font-size: 30px;
+	line-height: 25px;
+	font-weight: 100;
+	color: #999;
+}
+
+.onicontab {
+	text-align: center;
+	-moz-border-radius: 4px 4px 0px 0px;
+	border-radius: 4px 4px 0px 0px;
+	margin-right: 6px;
+	padding: 2px 6px 0px 2px;
+}
+.officontab {
+	text-align: center;
+	padding: 2px 6px 0px 2px;
+	-moz-border-radius: 4px 4px 0px 0px;
+	border-radius: 4px 4px 0px 0px;
+	margin-right: 6px;
+}
+.columns {
+}
+
+.footerbar {
+	white-space: normal;
+	background: #3b4045; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3b4045 1%, #272a2d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#3b4045), color-stop(100%,#272a2d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3b4045 1%,#272a2d 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #3b4045 1%,#272a2d 100%); /* W3C */
+
+	-webkit-box-shadow: 0px 0px 30px rgba(9, 5, 0, 0.75);
+	-moz-box-shadow:    0px 0px 30px rgba(9, 5, 0, 0.75);
+	box-shadow:         0px 0px 30px rgba(9, 5, 0, 0.75);
+
+	color: #fff;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	padding: 0;
+	border-top: solid 1px #222;
+	
+}
+.bbarlabel2lines {
+	text-align:left;
+	margin-top: 24px;
+	color: #ccc;
+	font-size: 12px;
+}
+.bbaritem {
+	width: 49%;
+	float: left;
+	text-align: center;
+}
+.leftbbar {
+ -moz-box-shadow:    inset 0 0 30px #1f2123;
+   -webkit-box-shadow: inset 0 0 30px #1f2123;
+   box-shadow:         inset 0 0 30px #1f2123;
+	border-top: solid 1px #444;
+	padding: 6px;
+	width: 48%;
+	float: left;
+	height: 88px;
+	box-sizing: border-box;
+}
+.rightbbar {
+	border-top: solid 1px #444;
+	padding: 6px;
+	width: 48%;
+	float: right;
+}
+.bbardiv {
+	float: left;
+	width: 1px;
+	border-left: 1px solid #111;
+	background: #444;
+	height: 88px;
+}
+.botbartitle {
+	text-align: center;
+	margin-bottom: 4px;
+	color: #ccc;
+}
+.appnums {
+	float: left;
+	margin-right: 6px;
+}
+.bbarlabel {
+	color: #ccc;
+	font-size: 11px;
+	margin: 6px 0px 0px 0px;
+}
+
+
+#jobsbutton {
+
+		border: solid 1px #0f8b8c;
+ -moz-box-shadow:    inset 0 0 1px #11d7d8;
+   -webkit-box-shadow: inset 0 0 1px #11d7d8;
+   box-shadow:         inset 0 0 1px #11d7d8;
+
+
+	background: #14a1a2;
+
+	background: -moz-linear-gradient(top,  #0f9999 1%, #0dbbbc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#0f9999), color-stop(100%,#0dbbbc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0f9999 1%,#0dbbbc 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #0f9999 1%,#0dbbbc 100%); /* W3C */
+	font-weight: bold;
+	color: #fff;
+	width: 25%;
+	padding: 6px;
+	-moz-border-radius: 6px 6px 0px 0px;
+	border-radius: 0px 6px 6px 0px;
+	float: left;
+	margin: -2px 12px 6px -6px;
+}
+#jobtitle {
+	float: right;
+	text-align: right;
+	margin-top: 7px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 13px;
+}
+.applicanttabbar {
+	/* position: fixed; */
+	z-index: 902;
+	top: 84px;
+	left: 0;
+	width: 100%;
+	border-bottom: solid 4px #0dbbbc;
+	padding-left: 4px;
+	background: #e0e0e0;
+	box-sizing: border-box;
+}
+.applicanttab {
+	/*
+	margin-top: 118px; */
+	padding-top: 1px;
+}
+.atab {
+
+	background: #ffffff;
+
+	background: -moz-linear-gradient(top,  #f7f7f7 1%, #cccccc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f7f7f7), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f7f7f7 1%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #f7f7f7 1%,#cccccc 100%); /* W3C */
+
+	color: #666;
+		border: solid 1px #aaaaaa;
+ -moz-box-shadow:    inset 0 0 4px #ffffff;
+   -webkit-box-shadow: inset 0 0 4px #ffffff;
+   box-shadow:         inset 0 0 4px #ffffff;
+
+
+	padding: 4px 8px 4px 8px;
+	text-align: center;
+	-moz-border-radius: 4px 4px 0px 0px;
+	border-radius: 4px 4px 0px 0px;
+	margin-left: 3px;
+	margin-top: 6px;
+	float: left;
+
+}
+.active {
+	background: #0dbbbc;
+
+	background: -moz-linear-gradient(top,  #0dbbbc 1%, #0f9999 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#0dbbbc), color-stop(100%,#0f9999)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0dbbbc 1%,#0f9999 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom,  #0dbbbc 1%,#0f9999 100%); /* W3C */
+
+	color: #fff;
+	border: solid 1px #0f8b8c;
+	-moz-box-shadow:    inset 0 0 4px #18d4d5;
+	-webkit-box-shadow: inset 0 0 4px #18d4d5;
+	box-shadow:         inset 0 0 4px #18d4d5;
+
+}
+
+
+.botlink a {
+	text-decoration: none;
+	color: #fff;
+}
+
+
+.star-rating {
+	float:left;
+	width:17px;
+	height:15px;
+	text-indent:-999em;
+	cursor:pointer;
+	display:block;
+	background:transparent;
+	overflow:hidden;
+	background:url(../images/star.gif) no-repeat;
+}
